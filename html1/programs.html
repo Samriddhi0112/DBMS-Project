@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexFusion - Programs</title>
+    <link rel="stylesheet" href="programs.css">
+    <link rel="stylesheet" href="program_detail.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="FlexFusion Logo" class="logo">
+            <h1>FlexFusion</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="programs.html" class="active">Plans</a></li>
+                <li><a href="mindfulness.html">Mindfulness</a></li>
+                <li><a href="diet.html">Diet</a></li>
+                <li><a href="store.html">Store</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="signup.html" class="signup-btn">Signup</a>
+            <a href="login.html" class="login-btn">Login</a>
+        </div>
+    </header>
+
+    <div class="hero-section">
+        <h1>Fitness Programs</h1>
+        <p>Find the perfect program to achieve your fitness goals</p>
+    </div>
+
+    <div class="program-filter">
+        <button class="filter-btn active" data-filter="all">All Programs</button>
+        <button class="filter-btn" data-filter="beginner">Beginner</button>
+        <button class="filter-btn" data-filter="intermediate">Intermediate</button>
+        <button class="filter-btn" data-filter="advanced">Advanced</button>
+    </div>
+
+    <div class="programs-container">
+        <!-- Program Card 1 -->
+        <div class="program-card" data-category="beginner">
+            <div class="program-image">
+                <img src="strength.jpg" alt="Strength Training">
+                <div class="difficulty-badge">Beginner</div>
+            </div>
+            <div class="program-details">
+                <h3>Strength Foundations</h3>
+                <div class="program-meta">
+                    <span><i class="fas fa-calendar-alt"></i> 8 weeks</span>
+                    <span><i class="fas fa-dumbbell"></i> 3-4 days/week</span>
+                </div>
+                <p>Build a solid foundation with our beginner-friendly strength program. Perfect for newcomers to fitness.</p>
+                <div class="program-features">
+                    <span>Full body workouts</span>
+                    <span>Video guidance</span>
+                    <span>Progress tracking</span>
+                </div>
+                <a href="program_detail.html" class="program-btn">View Program</a>
+            </div>
+        </div>
+
+        <!-- Program Card 2 -->
+        <div class="program-card" data-category="intermediate">
+            <div class="program-image">
+                <img src="HIIT.jpeg" alt="HIIT Training">
+                <div class="difficulty-badge">Intermediate</div>
+            </div>
+            <div class="program-details">
+                <h3>HIIT Revolution</h3>
+                <div class="program-meta">
+                    <span><i class="fas fa-calendar-alt"></i> 6 weeks</span>
+                    <span><i class="fas fa-dumbbell"></i> 4-5 days/week</span>
+                </div>
+                <p>Burn fat and build muscle with our high-intensity interval training program designed for intermediate fitness levels.</p>
+                <div class="program-features">
+                    <span>30-minute workouts</span>
+                    <span>Minimal equipment</span>
+                    <span>Nutrition guide</span>
+                </div>
+                <a href="program_detail.html" class="program-btn">View Program</a>
+            </div>
+        </div>
+
+        <!-- Program Card 3 -->
+        <div class="program-card" data-category="advanced">
+            <div class="program-image">
+                <img src="adv.jpg" alt="Performance Training">
+                <div class="difficulty-badge">Advanced</div>
+            </div>
+            <div class="program-details">
+                <h3>Elite Performance</h3>
+                <div class="program-meta">
+                    <span><i class="fas fa-calendar-alt"></i> 12 weeks</span>
+                    <span><i class="fas fa-dumbbell"></i> 5-6 days/week</span>
+                </div>
+                <p>Take your fitness to the next level with our advanced performance program designed for experienced athletes.</p>
+                <div class="program-features">
+                    <span>Periodized training</span>
+                    <span>Recovery protocols</span>
+                    <span>Performance metrics</span>
+                </div>
+                <a href="program_detail.html" class="program-btn">View Program</a>
+            </div>
+        </div>
+
+        <!-- Program Card 4 -->
+        <div class="program-card" data-category="beginner">
+            <div class="program-image">
+                <img src="Flexible.jpeg" alt="Flexibility Training">
+                <div class="difficulty-badge">Beginner</div>
+            </div>
+            <div class="program-details">
+                <h3>Flex & Flow</h3>
+                <div class="program-meta">
+                    <span><i class="fas fa-calendar-alt"></i> 4 weeks</span>
+                    <span><i class="fas fa-dumbbell"></i> 3 days/week</span>
+                </div>
+                <p>Improve flexibility, mobility and reduce injury risk with our beginner-friendly flexibility program.</p>
+                <div class="program-features">
+                    <span>Dynamic stretching</span>
+                    <span>Mobility exercises</span>
+                    <span>Joint health</span>
+                </div>
+                <a href="program_detail.html" class="program-btn">View Program</a>
+            </div>
+        </div>
+
+        <!-- Program Card 5 -->
+        <div class="program-card" data-category="intermediate">
+            <div class="program-image">
+                <img src="cardio.jpg" alt="Cardio Training">
+                <div class="difficulty-badge">Intermediate</div>
+            </div>
+            <div class="program-details">
+                <h3>Cardio Conditioning</h3>
+                <div class="program-meta">
+                    <span><i class="fas fa-calendar-alt"></i> 8 weeks</span>
+                    <span><i class="fas fa-dumbbell"></i> 4 days/week</span>
+                </div>
+                <p>Build endurance and improve your cardiovascular health with our targeted cardio program.</p>
+                <div class="program-features">
+                    <span>Heart rate training</span>
+                    <span>Progressive overload</span>
+                    <span>Endurance building</span>
+                </div>
+                <a href="program_detail.html" class="program-btn">View Program</a>
+            </div>
+        </div>
+
+        <!-- Program Card 6 -->
+        <div class="program-card" data-category="advanced">
+            <div class="program-image">
+                <img src="cross.jpg" alt="Cross Training">
+                <div class="difficulty-badge">Advanced</div>
+            </div>
+            <div class="program-details">
+                <h3>Cross Training Elite</h3>
+                <div class="program-meta">
+                    <span><i class="fas fa-calendar-alt"></i> 10 weeks</span>
+                    <span><i class="fas fa-dumbbell"></i> 5 days/week</span>
+                </div>
+                <p>Challenge every aspect of your fitness with our comprehensive cross-training program for advanced athletes.</p>
+                <div class="program-features">
+                    <span>Strength & endurance</span>
+                    <span>Skill development</span>
+                    <span>Competition prep</span>
+                </div>
+                <a href="program_detail.html" class="program-btn">View Program</a>
+            </div>
+        </div>
+
+        <!--  Program Card 7 - Dance Workouts -->
+        <div class="program-card" data-category="intermediate">
+            <div class="program-image">
+                <img src="dance.jpg" alt="Dance Workouts">
+                <div class="difficulty-badge">Intermediate</div>
+            </div>
+            <div class="program-details">
+                <h3>Rhythm & Burn</h3>
+                <div class="program-meta">
+                    <span><i class="fas fa-calendar-alt"></i> 6 weeks</span>
+                    <span><i class="fas fa-music"></i> 3-4 days/week</span>
+                </div>
+                <p>Burn calories while having fun with our dynamic dance-based workout program that combines cardio and toning.</p>
+                <div class="program-features">
+                    <span>Multiple dance styles</span>
+                    <span>Choreography videos</span>
+                    <span>High-energy routines</span>
+                </div>
+                <a href="program_detail.html" class="program-btn">View Program</a>
+            </div>
+        </div>
+
+        <!--  Program Card 8 - Yoga Fusion -->
+        <div class="program-card" data-category="beginner">
+            <div class="program-image">
+                <img src="yoga.jpg" alt="Yoga Fusion">
+                <div class="difficulty-badge">Beginner</div>
+            </div>
+            <div class="program-details">
+                <h3>Yoga Fusion</h3>
+                <div class="program-meta">
+                    <span><i class="fas fa-calendar-alt"></i> 8 weeks</span>
+                    <span><i class="fas fa-om"></i> 4 days/week</span>
+                </div>
+                <p>Combine traditional yoga practices with modern fitness techniques for strength, flexibility, and mental wellness.</p>
+                <div class="program-features">
+                    <span>Stress reduction</span>
+                    <span>Body alignment</span>
+                    <span>Meditation guidance</span>
+                </div>
+                <a href="program_detail.html" class="program-btn">View Program</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <div class="cta-content">
+            <h2>Not sure which program is right for you?</h2>
+            <p>Take our fitness assessment and get personalized program recommendations.</p>
+            <a href="fitness_ass.html" class="cta-button">Take Fitness Assessment</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.png" alt="FlexFusion Logo" class="footer-logo-img">
+                <h3>FlexFusion</h3>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="program_detail.html">Strength Training</a></li>
+                        <li><a href="program_detail.html">HIIT Workouts</a></li>
+                        <li><a href="program_detail.html">Flexibility</a></li>
+                        <li><a href="programs.html">All Programs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="help.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h4>Subscribe to our Newsletter</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 FlexFusion. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="programs.js"></script>
+    <script src="program_detail.js"></script>
+
+</body>
+</html>

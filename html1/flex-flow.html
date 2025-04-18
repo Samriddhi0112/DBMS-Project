@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexFusion - Flex & Flow Program</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="program-videos.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="FlexFusion Logo" class="logo">
+            <h1>FlexFusion</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="programs.html" class="active">Plans</a></li>
+                <li><a href="diet.html">Diet</a></li>
+                <li><a href="store.html">Store</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="profile.html" class="login-btn">My Profile</a>
+            <a href="#" class="signup-btn" id="logout-btn">Logout</a>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="program-title">Flex & Flow</h1>
+        <p class="program-details">Enhance flexibility and mobility through yoga and stretching</p>
+
+         <!-- Program Navigation -->
+         <div class="program-navigation">
+            <h3 class="program-nav-title">Jump to Week:</h3>
+            <div class="program-week-nav">
+                <button class="week-nav-btn active" data-week="1">Week 1</button>
+                <button class="week-nav-btn" data-week="2">Week 2</button>
+            </div>
+        </div>
+
+        
+
+        <!-- Week One Section -->
+        <section class="week-section" id="week1">
+            <div class="week-header">
+                <h2 class="week-title">Week One - Foundation Flow</h2>
+            </div>
+            <div class="workout-grid">
+                <!-- Day 1: Morning Yoga -->
+                <a href="https://www.youtube.com/watch?v=WmSIMpIDa_A" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/3822719/pexels-photo-3822719.jpeg" alt="Morning Yoga">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 01</div>
+                        <h3 class="workout-title">Morning Flow Yoga</h3>
+                        <p class="workout-description">Gentle morning yoga to awaken your body and mind.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Yoga</span>
+                            <span class="workout-tag">Beginner</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Day 2: Flexibility -->
+                <a href="https://www.youtube.com/watch?v=L_xrDAtykMI" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg" alt="Flexibility">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 02</div>
+                        <h3 class="workout-title">Full Body Stretch</h3>
+                        <p class="workout-description">Deep stretching routine for total body flexibility.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Flexibility</span>
+                            <span class="workout-tag">Stretch</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Days 3-4: Rest -->
+                <div class="workout-card rest-day-card">
+                    <div class="workout-thumbnail rest-day">
+                        <div class="rest-day-icon">
+                            <i class="fas fa-bed"></i>
+                            <i class="fas fa-moon"></i>
+                        </div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 03-04</div>
+                        <h3 class="workout-title">Active Recovery</h3>
+                        <p class="workout-description">Light stretching and mindful movement.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Recovery</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 5: Mobility -->
+                <a href="https://www.youtube.com/watch?v=UBnfm4s7CRA" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/4056535/pexels-photo-4056535.jpeg" alt="Mobility">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 05</div>
+                        <h3 class="workout-title">Joint Mobility Flow</h3>
+                        <p class="workout-description">Dynamic movements for better joint health.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Mobility</span>
+                            <span class="workout-tag">Flow</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Day 6: Dynamic Flow -->
+                <a href="https://www.youtube.com/watch?v=L_xrDAtykMI" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/3822716/pexels-photo-3822716.jpeg" alt="Dynamic Flow">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 06</div>
+                        <h3 class="workout-title">Dynamic Flow Sequence</h3>
+                        <p class="workout-description">Dynamic stretching and movement flow for full body mobility.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Dynamic</span>
+                            <span class="workout-tag">Flow</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Day 7: Rest -->
+                <div class="workout-card rest-day-card">
+                    <div class="workout-thumbnail rest-day">
+                        <div class="rest-day-icon">
+                            <i class="fas fa-bed"></i>
+                            <i class="fas fa-moon"></i>
+                        </div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 07</div>
+                        <h3 class="workout-title">Rest Day</h3>
+                        <p class="workout-description">Take time to rest and recover.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Recovery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Week Two Section -->
+        <section class="week-section" id="week2">
+            <div class="week-header">
+                <h2 class="week-title">Week Two - Advanced Flow</h2>
+            </div>
+            <div class="workout-grid">
+                <!-- Day 8: Power Yoga -->
+                <a href="https://www.youtube.com/watch?v=WmSIMpIDa_A" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg" alt="Power Yoga">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 08</div>
+                        <h3 class="workout-title">Power Yoga Flow</h3>
+                        <p class="workout-description">Energetic yoga sequence for strength and flexibility.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Power Yoga</span>
+                            <span class="workout-tag">Flow</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Day 9: Deep Stretch -->
+                <a href="https://www.youtube.com/watch?v=L_xrDAtykMI" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg" alt="Deep Stretch">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 09</div>
+                        <h3 class="workout-title">Advanced Flexibility</h3>
+                        <p class="workout-description">Advanced stretching routine for deeper flexibility.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Advanced</span>
+                            <span class="workout-tag">Flexibility</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Days 10-11: Rest -->
+                <div class="workout-card rest-day-card">
+                    <div class="workout-thumbnail rest-day">
+                        <div class="rest-day-icon">
+                            <i class="fas fa-bed"></i>
+                            <i class="fas fa-moon"></i>
+                        </div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 10-11</div>
+                        <h3 class="workout-title">Mindful Rest</h3>
+                        <p class="workout-description">Focus on meditation and light stretching.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Recovery</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 12: Advanced Flexibility Flow -->
+                <a href="https://www.youtube.com/watch?v=WmSIMpIDa_A" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/3823207/pexels-photo-3823207.jpeg" alt="Advanced Flow">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 12</div>
+                        <h3 class="workout-title">Advanced Flow Mastery</h3>
+                        <p class="workout-description">Master complex flexibility sequences and advanced poses.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Advanced</span>
+                            <span class="workout-tag">Mastery</span>
+                            <span class="workout-tag">Flow</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Days 13: Peak Performance Flow -->
+                <a href="https://www.youtube.com/watch?v=WmSIMpIDa_A" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/3822585/pexels-photo-3822585.jpeg" alt="Final Flow">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 13</div>
+                        <h3 class="workout-title">Peak Performance Flow</h3>
+                        <p class="workout-description">Combine all learned techniques in this advanced flexibility sequence.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Advanced</span>
+                            <span class="workout-tag">Peak</span>
+                            <span class="workout-tag">Flow</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Day 14: Final Rest -->
+                <div class="workout-card rest-day-card">
+                    <div class="workout-thumbnail rest-day">
+                        <div class="rest-day-icon">
+                            <i class="fas fa-bed"></i>
+                            <i class="fas fa-moon"></i>
+                        </div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 14</div>
+                        <h3 class="workout-title">Program Complete!</h3>
+                        <p class="workout-description">Congratulations on completing the program!</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Complete</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.png" alt="FlexFusion Logo" class="footer-logo-img">
+                <h2>FlexFusion</h2>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="homepage.html">Home</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="diet.html">Diet Plans</a></li>
+                        <li><a href="store.html">Store</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h4>Subscribe to Our Newsletter</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 FlexFusion. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="program-videos.js"></script>
+</body>
+</html>

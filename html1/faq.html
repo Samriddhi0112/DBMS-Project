@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQs - FlexFusion Fitness</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: #111;
+      border-bottom: 1px solid #444;
+    }
+
+    header h1 {
+      color: #d4af37;
+      font-size: 2.5rem;
+    }
+
+    .faq-section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .faq-section h2 {
+      text-align: center;
+      color: #d4af37;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .faq {
+      margin-bottom: 20px;
+      background-color: #111;
+      border: 1px solid #444;
+      border-radius: 8px;
+      padding: 15px 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .faq:hover {
+      background-color: #1a1a1a;
+    }
+
+    .faq h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #d4af37;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq p {
+      margin: 10px 0 0;
+      display: none;
+      color: #ddd;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid #444;
+      margin-top: 40px;
+    }
+
+    .faq.open p {
+      display: block;
+    }
+
+    .icon {
+      color: #d4af37;
+      transition: transform 0.3s;
+    }
+
+    .faq.open .icon {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>FAQs</h1>
+    <p>Your questions, answered.</p>
+  </header>
+
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq">
+      <h3>What is FlexFusion all about? <i class="fas fa-chevron-down icon"></i></h3>
+      <p>FlexFusion is a digital fitness platform offering tailored programs, expert guidance, and interactive features to help you achieve your fitness goals from the comfort of your home.</p>
+    </div>
+
+    <div class="faq">
+      <h3>Are the workouts beginner-friendly? <i class="fas fa-chevron-down icon"></i></h3>
+      <p>Yes! Our programs are designed for all levels — from complete beginners to advanced fitness lovers. You can select the intensity and focus area based on your personal goals.</p>
+    </div>
+
+    <div class="faq">
+      <h3>How do I choose the right program? <i class="fas fa-chevron-down icon"></i></h3>
+      <p>You can use the goal selector on our Programs page to enter your weight and goals (loss/gain/toning). Based on that, we suggest suitable plans that match your fitness level.</p>
+    </div>
+
+    <div class="faq">
+      <h3>Do I need gym equipment? <i class="fas fa-chevron-down icon"></i></h3>
+      <p>Most of our plans are designed for home workouts with minimal or no equipment. However, we do offer some advanced routines that utilize dumbbells, resistance bands, or yoga mats.</p>
+    </div>
+
+    <div class="faq">
+      <h3>Is there a free trial available? <i class="fas fa-chevron-down icon"></i></h3>
+      <p>Absolutely! We offer a 7-day free trial so you can explore our platform and see the results for yourself before committing.</p>
+    </div>
+
+    <div class="faq">
+      <h3>Can I track my progress? <i class="fas fa-chevron-down icon"></i></h3>
+      <p>Yes, FlexFusion lets you track workouts, calories burned, weight changes, and more through your dashboard. We're also working on integrating smart wearables soon!</p>
+    </div>
+
+  </section>
+
+  <footer>
+    &copy; 2025 FlexFusion Fitness | Sweat. Grow. Repeat.
+  </footer>
+
+  <script>
+    const faqs = document.querySelectorAll('.faq');
+    faqs.forEach(faq => {
+      faq.addEventListener('click', () => {
+        faq.classList.toggle('open');
+      });
+    });
+  </script>
+
+</body>
+</html>

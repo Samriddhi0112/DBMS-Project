@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FlexFusion - Your Cart</title>
+  <link rel="stylesheet" href="store.css" />
+  <link rel="stylesheet" href="cart.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+<body>
+  <!-- HEADER / NAV -->
+  <header>
+    <!-- Mobile menu toggle button -->
+    <div id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <div class="logo-container">
+      <img src="logo.png" alt="FlexFusion Logo" class="logo" />
+      <h1>FlexFusion</h1>
+    </div>
+    
+    <nav>
+      <ul class="nav-links">
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="programs.html">Plans</a></li>
+        <li><a href="mindfulness.html">Mindfulness</a></li>
+        <li><a href="diet.html">Diet</a></li>
+        <li><a href="store.html">Store</a></li>
+      </ul>
+    </nav>
+    
+    <div class="auth-and-cart">
+      <!-- Cart icon with counter moved before auth buttons for better placement -->
+      <a href="cart.html" class="cart active">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </a>
+      
+      <div class="auth-buttons">
+        <a href="login.html" class="login-btn">Login</a>
+        <a href="signup.html" class="signup-btn">Signup</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CART HERO -->
+  <section class="cart-hero">
+    <h1>Your Cart</h1>
+    <p>Review your items before checkout.</p>
+  </section>
+
+  <!-- CART CONTENT -->
+  <section class="cart-container">
+    <div class="cart-items-container">
+      <!-- Cart items will be dynamically inserted here -->
+      <div id="cart-items">
+        <!-- Empty cart message shown initially -->
+        <div id="empty-cart-message" class="empty-cart">
+          <i class="fas fa-shopping-cart"></i>
+          <h2>Your cart is empty</h2>
+          <p>Looks like you haven't added any items to your cart yet.</p>
+          <a href="store.html" class="continue-shopping-btn">Continue Shopping</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Cart summary -->
+    <div class="cart-summary">
+      <h2>Order Summary</h2>
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span id="subtotal">₹0</span>
+      </div>
+      <div class="summary-row">
+        <span>Shipping</span>
+        <span id="shipping">₹0</span>
+      </div>
+      <div class="summary-row">
+        <span>Tax</span>
+        <span id="tax">₹0</span>
+      </div>
+      <div class="summary-row total">
+        <span>Total</span>
+        <span id="total">₹0</span>
+      </div>
+      
+      <!-- Promo code -->
+      <div class="promo-code">
+        <input type="text" placeholder="Enter promo code" id="promo-input">
+        <button id="apply-promo">Apply</button>
+      </div>
+      
+      <!-- Checkout button -->
+      <button id="checkout-btn" class="checkout-btn" disabled>
+        Proceed to Checkout
+      </button>
+      
+      <!-- Continue shopping -->
+      <a href="store.html" class="continue-shopping-link">
+        <i class="fas fa-arrow-left"></i> Continue Shopping
+      </a>
+    </div>
+  </section>
+
+  <!-- RECOMMENDED PRODUCTS -->
+  <section class="recommended-products">
+    <h2>You might also like</h2>
+    <div class="recommendations-grid">
+      <!-- Products will be dynamically inserted here -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="logo.png" alt="FlexFusion Logo" class="footer-logo-img" />
+        <h3>FlexFusion</h3>
+      </div>
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="programs.html">All Programs</a></li>
+            <li><a href="mindfulness.html">Mindfulness</a></li>
+            <li><a href="diet.html">Diet</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="help.html">Help Center</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="newsletter">
+          <h4>Subscribe to our Newsletter</h4>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 FlexFusion. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="cart.js"></script>
+</body>
+</html>

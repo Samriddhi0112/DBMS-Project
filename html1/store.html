@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FlexFusion - Store</title>
+  <link rel="stylesheet" href="store.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+<body>
+  <!-- HEADER / NAV -->
+  <header>
+    <!-- Mobile menu toggle button -->
+    <div id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <div class="logo-container">
+      <img src="logo.png" alt="FlexFusion Logo" class="logo" />
+      <h1>FlexFusion</h1>
+    </div>
+    
+    <nav>
+      <ul class="nav-links">
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="programs.html">Plans</a></li>
+        <li><a href="mindfulness.html">Mindfulness</a></li>
+        <li><a href="diet.html">Diet</a></li>
+        <li><a href="store.html" class="active">Store</a></li>
+      </ul>
+    </nav>
+    
+    <div class="auth-and-cart">
+      <!-- Cart icon with counter -->
+      <a href="cart.html" class="cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </a>
+      <div class="auth-buttons">
+        <a href="login.html" class="login-btn">Login</a>
+        <a href="signup.html" class="signup-btn">Signup</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- STORE HERO -->
+  <section class="store-hero">
+    <h1>FlexFusion Store</h1>
+    <p>Your one-stop shop for fitness gear, supplements, and apparel.</p>
+  </section>
+
+  <!-- FILTER / CATEGORIES -->
+  <div class="store-filter">
+    <button class="filter-btn active" data-filter="all">All Products</button>
+    <button class="filter-btn" data-filter="supplements">Supplements</button>
+    <button class="filter-btn" data-filter="apparel">Apparel</button>
+    <button class="filter-btn" data-filter="equipment">Equipment</button>
+  </div>
+
+  <!-- PRODUCTS GRID -->
+  <section class="products-grid">
+    <!-- ====== Supplements Category (6 Products) ====== -->
+    <div class="product-card" data-category="supplements">
+      <div class="product-image">
+        <img src="whey_protein.jpg" alt="Whey Protein" />
+      </div>
+      <div class="product-info">
+        <h3>Whey Protein</h3>
+        <p class="price">₹1,499</p>
+        <p class="description">
+          High-quality whey protein isolate for muscle recovery and growth.
+        </p>
+        <button class="add-to-cart-btn">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="supplements">
+      <div class="product-image">
+        <img src="BCAA.jpg" alt="BCAA" />
+      </div>
+      <div class="product-info">
+        <h3>BCAA</h3>
+        <p class="price">₹899</p>
+        <p class="description">
+          Essential Branched-Chain Amino Acids for energy and endurance.
+        </p>
+        <button class="add-to-cart-btn">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="supplements">
+      <div class="product-image">
+        <img src="Pre-Workout Formula.jpg" alt="Pre-Workout Formula" />
+      </div>
+      <div class="product-info">
+        <h3>Pre-Workout Formula</h3>
+        <p class="price">₹1,299</p>
+        <p class="description">
+          Boost your workout with a high-energy pre-workout supplement.
+        </p>
+        <button class="add-to-cart-btn">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="supplements">
+      <div class="product-image">
+        <img src="creatine.jpg" alt="Creatine" />
+      </div>
+      <div class="product-info">
+        <h3>Creatine</h3>
+        <p class="price">₹999</p>
+        <p class="description">
+          Enhance your strength and endurance with our high-quality creatine.
+        </p>
+        <button class="add-to-cart-btn">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="supplements">
+      <div class="product-image">
+        <img src="glutamine.jpg" alt="Glutamine" />
+      </div>
+      <div class="product-info">
+        <h3>Glutamine</h3>
+        <p class="price">₹1,099</p>
+        <p class="description">
+          Supports muscle repair and immune health after workouts.
+        </p>
+        <button class="add-to-cart-btn">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="supplements">
+      <div class="product-image">
+        <img src="multivitamin.jpg" alt="Multivitamin" />
+      </div>
+      <div class="product-info">
+        <h3>Multivitamin</h3>
+        <p class="price">₹799</p>
+        <p class="description">
+          Complete daily support to keep your body in top form.
+        </p>
+        <button class="add-to-cart-btn">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+    
+    <!-- ====== Apparel Category (6 Products) ====== -->
+    <div class="product-card" data-category="apparel">
+      <div class="product-image">
+        <img src="gym-tshirt.jpg" alt="Gym T‑Shirt" />
+      </div>
+      <div class="product-info">
+        <h3>Gym T‑Shirt</h3>
+        <p class="price">₹799</p>
+        <p class="description">
+          Breathable, moisture‑wicking performance tee.
+        </p>
+        <button class="add-to-cart-btn">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="apparel">
+      <div class="product-image">
+        <img src="gym-leggings.jpg" alt="Gym Leggings" />
+      </div>
+      <div class="product-info">
+        <h3>Gym Leggings</h3>
+        <p class="price">₹999</p>
+        <p class="description">
+          Stylish and comfortable leggings for your workout routine.
+        </p>
+        <button class="add-to-cart-btn">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="apparel">
+      <div class="product-image">
+        <img src="running-shoes.jpg" alt="Running Shoes" />
+      </div>
+      <div class="product-info">
+        <h3>Running Shoes</h3>
+        <p class="price">₹2,199</p>
+        <p class="description">
+          Lightweight and durable shoes designed for running performance.
+        </p>
+        <button class="add-to-cart-btn">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="apparel">
+      <div class="product-image">
+        <img src="hoodie.jpg" alt="Fitness Hoodie" />
+      </div>
+      <div class="product-info">
+        <h3>Fitness Hoodie</h3>
+        <p class="price">₹1,499</p>
+        <p class="description">
+          Stay warm and stylish with our premium fitness hoodie.
+        </p>
+        <button class="add-to-cart-btn">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="apparel">
+      <div class="product-image">
+        <img src="compression-socks.jpg" alt="Compression Socks" />
+      </div>
+      <div class="product-info">
+        <h3>Compression Socks</h3>
+        <p class="price">₹499</p>
+        <p class="description">
+          Improve blood flow and reduce recovery times with these socks.
+        </p>
+        <button class="add-to-cart-btn">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="apparel">
+      <div class="product-image">
+        <img src="sports-cap.jpg" alt="Sports Cap" />
+      </div>
+      <div class="product-info">
+        <h3>Sports Cap</h3>
+        <p class="price">₹399</p>
+        <p class="description">
+          Lightweight cap to keep you cool during your workouts.
+        </p>
+        <button class="add-to-cart-btn">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+    
+    <!-- ====== Equipment Category (6 Products) ====== -->
+    <div class="product-card" data-category="equipment">
+      <div class="product-image">
+        <img src="yoga_mat.jpg" alt="Yoga Mat" />
+      </div>
+      <div class="product-info">
+        <h3>Yoga Mat</h3>
+        <p class="price">₹1,199</p>
+        <p class="description">
+          Non‑slip, cushioned mat for all types of floor exercises.
+        </p>
+        <button class="add-to-cart-btn">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="equipment">
+      <div class="product-image">
+        <img src="dumbbells.jpg" alt="Dumbbells" />
+      </div>
+      <div class="product-info">
+        <h3>Dumbbells</h3>
+        <p class="price">₹2,499</p>
+        <p class="description">
+          Adjustable dumbbells for a complete strength training regimen.
+        </p>
+        <button class="add-to-cart-btn">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="equipment">
+      <div class="product-image">
+        <img src="resistance-bands.jpg" alt="Resistance Bands" />
+      </div>
+      <div class="product-info">
+        <h3>Resistance Bands</h3>
+        <p class="price">₹699</p>
+        <p class="description">
+          Versatile bands for stretching, strength training, and rehabilitation.
+        </p>
+        <button class="add-to-cart-btn">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="equipment">
+      <div class="product-image">
+        <img src="treadmill.jpg" alt="Treadmill" />
+      </div>
+      <div class="product-info">
+        <h3>Treadmill</h3>
+        <p class="price">₹34,999</p>
+        <p class="description">
+          Compact and efficient treadmill for home workouts.
+        </p>
+        <button class="add-to-cart-btn">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="equipment">
+      <div class="product-image">
+        <img src="kettlebell.jpg" alt="Kettlebell" />
+      </div>
+      <div class="product-info">
+        <h3>Kettlebell</h3>
+        <p class="price">₹1,999</p>
+        <p class="description">
+          Perfect for dynamic strength and cardio workouts.
+        </p>
+        <button class="add-to-cart-btn">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="equipment">
+      <div class="product-image">
+        <img src="exercise-ball.jpg" alt="Exercise Ball" />
+      </div>
+      <div class="product-info">
+        <h3>Exercise Ball</h3>
+        <p class="price">₹899</p>
+        <p class="description">
+          Versatile ball for core training, balance, and flexibility exercises.
+        </p>
+        <button class="add-to-cart-btn">
+          <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL-TO-ACTION -->
+  <section class="store-cta">
+    <h2>Looking for something else?</h2>
+    <p>Contact our support or browse our full catalog.</p>
+    <a href="contact.html" class="cta-button">Contact Us</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="logo.png" alt="FlexFusion Logo" class="footer-logo-img">
+            <h3>FlexFusion</h3>
+        </div>
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Programs</h4>
+                <ul>
+                    <li><a href="program_detail.html">Strength Training</a></li>
+                    <li><a href="program_detail.html">HIIT Workouts</a></li>
+                    <li><a href="program_detail.html">Flexibility</a></li>
+                    <li><a href="programs.html">All Programs</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="help.html">Help Center</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="newsletter">
+                <h4>Subscribe to our Newsletter</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 FlexFusion. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="programs.js"></script>
+<script src="program-detail.js"></script>
+
+</body>
+</html>

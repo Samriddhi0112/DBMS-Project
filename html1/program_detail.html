@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexFusion - Program Details</title>
+    <link rel="stylesheet" href="program_detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="FlexFusion Logo" class="logo">
+            <h1>FlexFusion</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="programs.html" class="active">Plans</a></li>
+                <li><a href="mindfulness.html">Mindfulness</a></li>
+                <li><a href="diet.html">Diet</a></li>
+                <li><a href="store.html">Store</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="signup.html" class="signup-btn">Signup</a>
+            <a href="login.html" class="login-btn">Login</a>
+        </div>
+    </header>
+
+    <div class="program-hero">
+        <div class="program-hero-content">
+            <div class="program-badge" id="program-difficulty">Beginner</div>
+            <h1 id="program-title">Program Title</h1>
+            <div class="program-stats">
+                <span><i class="fas fa-calendar-alt"></i> <span id="program-duration">8 weeks</span></span>
+                <span><i class="fas fa-dumbbell"></i> <span id="program-frequency">3-4 days/week</span></span>
+                <span><i class="fas fa-users"></i> <span id="program-enrolled">2,546 enrolled</span></span>
+                <span><i class="fas fa-star"></i> <span id="program-rating">4.8 (324 reviews)</span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="program-details-container">
+        <div class="program-main">
+            <section class="program-overview">
+                <h2>Program Overview</h2>
+                <p id="program-description">Program description will go here. This is a detailed explanation of what the program entails, its benefits, and who it's designed for.</p>
+                
+                <div class="program-features-list">
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Feature 1</h4>
+                            <p>Description of feature 1</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Feature 2</h4>
+                            <p>Description of feature 2</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Feature 3</h4>
+                            <p>Description of feature 3</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="program-curriculum">
+                <h2>What You'll Learn</h2>
+                <div class="week-container">
+                    <div class="week-header" data-week="1">
+                        <h3>Week 1: Foundation</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="week-content">
+                        <div class="workout">
+                            <div class="workout-day">Day 1</div>
+                            <div class="workout-details">
+                                <h4>Introduction to Proper Form</h4>
+                                <p>Learn the basics of proper exercise form to prevent injury.</p>
+                            </div>
+                            <div class="workout-preview">
+                                <i class="fas fa-play-circle"></i>
+                                <span>Preview</span>
+                            </div>
+                        </div>
+                        <div class="workout">
+                            <div class="workout-day">Day 2</div>
+                            <div class="workout-details">
+                                <h4>Full Body Circuit</h4>
+                                <p>A balanced workout targeting all major muscle groups.</p>
+                            </div>
+                            <div class="workout-preview">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                        </div>
+                        <div class="workout">
+                            <div class="workout-day">Day 3</div>
+                            <div class="workout-details">
+                                <h4>Recovery & Stretching</h4>
+                                <p>Essential recovery techniques to maximize results.</p>
+                            </div>
+                            <div class="workout-preview">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="week-container">
+                    <div class="week-header" data-week="2">
+                        <h3>Week 2: Building Endurance</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="week-content">
+                        <!-- Week 2 workouts - initially hidden -->
+                    </div>
+                </div>
+                
+                <!-- More weeks would be listed here -->
+            </section>
+
+            <section class="program-reviews">
+                <h2>Student Reviews</h2>
+                <div class="reviews-summary">
+                    <div class="average-rating">
+                        <div class="rating-number">4.8</div>
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="total-reviews">324 reviews</div>
+                    </div>
+                    <div class="rating-bars">
+                        <div class="rating-bar">
+                            <span>5 stars</span>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 80%"></div>
+                            </div>
+                            <span>80%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>4 stars</span>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 15%"></div>
+                            </div>
+                            <span>15%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>3 stars</span>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 3%"></div>
+                            </div>
+                            <span>3%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>2 stars</span>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 1%"></div>
+                            </div>
+                            <span>1%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>1 star</span>
+                            <div class="bar-container">
+                                <div class="bar" style="width: 1%"></div>
+                            </div>
+                            <span>1%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-list">
+                    <div class="review">
+                        <div class="review-avatar">
+                            <img src="/api/placeholder/50/50" alt="User Avatar">
+                        </div>
+                        <div class="review-content">
+                            <div class="review-header">
+                                <h4>Rahul Singh</h4>
+                                <div class="review-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="review-date">2 weeks ago</div>
+                            <p>This program completely changed my approach to fitness. The instructors are incredible, and the structured progression really works. I've seen noticeable results in just a month!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="review">
+                        <div class="review-avatar">
+                            <img src="/api/placeholder/50/50" alt="User Avatar">
+                        </div>
+                        <div class="review-content">
+                            <div class="review-header">
+                                <h4>Priya Patel</h4>
+                                <div class="review-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="review-date">1 month ago</div>
+                            <p>As a beginner, I was intimidated at first, but this program is perfectly designed for all fitness levels. The video guidance makes it easy to follow along, and I love how I can track my progress!</p>
+                        </div>
+                    </div>
+                    
+                    <!-- More reviews would be here -->
+                </div>
+            </section>
+        </div>
+        
+        <div class="program-sidebar">
+            <div class="enrollment-card">
+                <div class="program-price">
+                    <span class="current-price">₹<span id="program-price">2,999</span></span>
+                    <span class="original-price">₹<span id="program-original-price">4,999</span></span>
+                    <span class="discount-badge">40% OFF</span>
+                </div>
+                <div class="enrollment-timer">
+                    <i class="fas fa-clock"></i> Special offer ends in: <span id="offer-timer">2 days 8:15:30</span>
+                </div>
+                <a href="enroll.html" class="enroll-button">Enroll Now</a>
+                <div class="guarantee">
+                    <i class="fas fa-shield-alt"></i> 30-Day Money Back Guarantee
+                </div>
+                <div class="enrollment-includes">
+                    <h4>This program includes:</h4>
+                    <ul>
+                        <li><i class="fas fa-video"></i> <span id="video-count">42</span> on-demand videos</li>
+                        <li><i class="fas fa-file-alt"></i> <span id="resource-count">15</span> downloadable resources</li>
+                        <li><i class="fas fa-mobile-alt"></i> Mobile and TV access</li>
+                        <li><i class="fas fa-certificate"></i> Certificate of completion</li>
+                        <li><i class="fas fa-comments"></i> Community support</li>
+                        <li><i class="fas fa-infinity"></i> Lifetime access</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="trainer-card">
+                <h3>Your Trainer</h3>
+                <div class="trainer-profile">
+                    <img src="trainer.jpg" alt="Trainer" class="trainer-avatar">
+                    <div class="trainer-info">
+                        <h4 id="trainer-name">Riya Jain</h4>
+                        <p id="trainer-title">Fitness Coach & Nutrition Specialist</p>
+                    </div>
+                </div>
+                <div class="trainer-stats">
+                    <div class="trainer-stat">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="trainer-stat">
+                        <span class="stat-number">15K+</span>
+                        <span class="stat-label">Students</span>
+                    </div>
+                </div>
+                <p id="trainer-bio">Trainer bio will go here. This is a short description of the trainer's background, expertise, and approach to fitness.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="related-programs">
+        <h2>You May Also Like</h2>
+        <div class="related-programs-container">
+            <!-- Related program cards would go here -->
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="" alt="FlexFusion Logo" class="footer-logo-img">
+                <h3>FlexFusion</h3>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="#">Strength Training</a></li>
+                        <li><a href="#">HIIT Workouts</a></li>
+                        <li><a href="#">Flexibility</a></li>
+                        <li><a href="programs.html">All Programs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="help.html">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h4>Subscribe to our Newsletter</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 FlexFusion. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="program_detail.js"></script>
+</body>
+</html>
