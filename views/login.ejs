@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login/Sign-Up</title>
+    <link rel="stylesheet" href="/css/login.css"/>
+  </head>
+
+  <body>
+    <section class="imp">
+      <section>
+        <div class="login show" id="one">
+          <div class="textbox slide-left2">
+            <div class="head">
+              <h1>
+                LOGIN
+              </h1>
+            </div>
+            <form action="/login" method="POST">
+              <input type="text" name="name" placeholder="NAME" required />
+
+              <input type="email" name="email" placeholder="EMAIL" required />
+
+              <input type="password" name="password" placeholder="PASSWORD" required />
+              <input type="hidden" name="redirectTo" value="<%= redirectTo %>">
+
+              <button type="button" id="b">
+                <a href="/forgot-password" style="cursor: pointer; text-decoration: none">
+                 <b> Forgot password?</b>
+                </a>
+              </button>
+              <button type="submit" class="sign_in_btn">
+                SIGN IN
+              </button>
+              <center>
+              <a href="/" class="btn">Back to Home</a>
+              </center>
+            </form>
+          </div>
+        </div>
+
+        <div class="sec show" id="two">
+          <div class="textbox slide-left">
+            
+            <h2>Sign up to Get into the Fanatic World!</h2>
+
+            <button id="b1" style="cursor: pointer" class="prompt_sign_up">
+              SIGN UP
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="sec hide" id="three">
+          <div class="textbox slide-left">
+            <h1>Already a member?</h1>
+
+            <p>Login to Explore</p>
+
+            <button id="b2" style="cursor: pointer" class="prompt_sign_in">
+              LOGIN
+            </button>
+          </div>
+        </div>
+
+        <div class="login hide" id="four">
+          <div class="textbox slide-right">
+            <div class="head">
+              <h1>Create Account</h1>
+            </div>
+            <form action="/signup" method="POST" id="signupForm">
+              <input type="text" name="name" placeholder="NAME" required />
+
+              <br/>
+
+              <input type="email" name="email" placeholder="EMAIL" required />
+
+              <br/>
+
+              <input type="password" name="password" placeholder="PASSWORD" required />
+
+              <br/>
+
+              <input type="text" name="phone" placeholder="PHONE NO. (optional)" />
+
+              <br/>
+
+              <button type="submit" class="sign_up_btn">
+                SIGN UP
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <script src="/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <!-- Page styles -->
+    <link rel="stylesheet" href="/css/hp.css"> 
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <video autoplay muted loop id="background-video">
+            <source src="/hp.mp4" type="video/mp4">
+        </video>
+
+        <nav>
+            <div class="logo">
+                <img src="/logo (2).png" alt="logo" class="logoimg">
+                <span class="name">FlexFusion</span>
+            </div>
+            <div class="functions">
+                <a href="/program">Plans</a>
+                <a href="/diet">Diet</a>
+                <a href="/store">Store</a>
+            </div>
+            <div class="ls">
+                <% if (user) { %>
+                    <span style="color: white;">Welcome, <%= user.name %> 👋</span>
+                    <a href="/logout">Logout</a>
+                <% } else { %>
+                    <a href="/signup" >Signup</a>
+                    <a href="/login">Login</a>
+                <% } %>
+            </div>
+        </nav>
+
+        <div class="hero-content"> 
+            <h1>Explore your fitness journey with us!</h1>
+            <p>Join us today and take the first step toward a healthier you!</p>
+            <button class="cta-button" id="cta-button" onclick="window.location='/program'">Explore Now</button>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="key-feature" id="key-feature">
+        <h1>Why Choose Us?</h1>
+
+        <div class="features">
+            <img src="/workout.jpeg" alt="personalized-workout">
+            <div class="features_text">
+                <h2>Personalized Workout Plans</h2>
+                <p>Get customized workout routines tailored to your fitness level, goals, and schedule. Achieve the best results with structured plans designed just for you.</p>
+                <button id="plans" onclick="window.location='/program'">Plans</button>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="features-reverse">
+            <img src="/diet.jpg" alt="diet guide">
+            <div class="reverse_text"> 
+                <h2>Diet And Nutrition Guide</h2>
+                <p>Optimize your health with expert-backed nutrition advice and meal plans. Fuel your workouts with the right diet for muscle gain, weight loss, or overall well-being.</p>
+                <button id="diet" onclick="window.location='/diet'">Diet</button>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="features-reverse">
+            <img src="/store.webp" alt="shopping" style="width: 26%;">
+            <div class="reverse_text">
+                <h2>One-Stop Fitness Store</h2>
+                <p>Get all your fitness essentials in one place! From supplements and workout gear to wellness products, our store offers high-quality items to support your active lifestyle.</p>
+                <button id="store" onclick="window.location='/store'">Store</button>
+            </div>
+        </div>
+
+        <div class="scroll-down">
+            <div class="arrow" id="arrow"></div>
+        </div>
+    </section>
+
+    <!-- JavaScript Files -->
+    <script src="/hp.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexFusion - Fitness Assessment</title>
+    <link rel="stylesheet" href="/css/fitness_ass.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="/logo.png" alt="FlexFusion Logo" class="logo">
+            <h1>FlexFusion</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/" class="<%= (page === 'home') ? 'active' : '' %>">Home</a></li>
+                <li><a href="/program" class="<%= (page === 'program') ? 'active' : '' %>">Plans</a></li>
+                <li><a href="/diet" class="<%= (page === 'diet') ? 'active' : '' %>">Diet</a></li>
+                <li><a href="/store" class="<%= (page === 'store') ? 'active' : '' %>">Store</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <% if (user) { %>
+                <a href="/logout" class="login-btn">Logout</a>
+                <span>Welcome, <%= user.name %>!</span>
+              <% } else { %>
+                <a href="/signup" class="signup-btn">Signup</a>
+                <a href="/login" class="login-btn">Login</a>
+              <% } %>
+            </div>
+            <% if (!user) { %>
+              <p class="error-message">User data is not available. Please log in to access personalized features.</p>
+            <% } %>
+        </div>
+    </header>
+
+    <div class="assessment-container">
+        <div class="assessment-header">
+            <h1>Find Your Perfect Fitness Program</h1>
+            <p>Answer a few questions about your goals, experience, and preferences to get personalized program recommendations.</p>
+        </div>
+        
+        <div class="assessment-progress">
+            <div class="progress-bar">
+                <div class="progress" id="assessment-progress-bar"></div>
+            </div>
+            <div class="progress-steps">
+                <div class="step active" data-step="1">1</div>
+                <div class="step" data-step="2">2</div>
+                <div class="step" data-step="3">3</div>
+                <div class="step" data-step="4">4</div>
+                <div class="step" data-step="5">5</div>
+            </div>
+        </div>
+        
+        <div class="assessment-form">
+            <!-- Step 1: Goals -->
+            <div class="assessment-step active" id="step-1">
+                <h2>What are your main fitness goals?</h2>
+                <p class="step-description">Select all that apply to you</p>
+                
+                <div class="goal-options">
+                    <div class="goal-option">
+                        <input type="checkbox" id="goal-strength" name="goals" value="strength">
+                        <label for="goal-strength">
+                            <div class="option-icon"><i class="fas fa-dumbbell"></i></div>
+                            <div class="option-text">Build Strength</div>
+                        </label>
+                    </div>
+                    
+                    <div class="goal-option">
+                        <input type="checkbox" id="goal-weight-loss" name="goals" value="weight-loss">
+                        <label for="goal-weight-loss">
+                            <div class="option-icon"><i class="fas fa-weight"></i></div>
+                            <div class="option-text">Lose Weight</div>
+                        </label>
+                    </div>
+                    
+                    <div class="goal-option">
+                        <input type="checkbox" id="goal-muscle" name="goals" value="muscle">
+                        <label for="goal-muscle">
+                            <div class="option-icon"><i class="fas fa-running"></i></div>
+                            <div class="option-text">Build Muscle</div>
+                        </label>
+                    </div>
+                    
+                    <div class="goal-option">
+                        <input type="checkbox" id="goal-endurance" name="goals" value="endurance">
+                        <label for="goal-endurance">
+                            <div class="option-icon"><i class="fas fa-heartbeat"></i></div>
+                            <div class="option-text">Improve Endurance</div>
+                        </label>
+                    </div>
+                    
+                    <div class="goal-option">
+                        <input type="checkbox" id="goal-flexibility" name="goals" value="flexibility">
+                        <label for="goal-flexibility">
+                            <div class="option-icon"><i class="fas fa-child"></i></div>
+                            <div class="option-text">Increase Flexibility</div>
+                        </label>
+                    </div>
+                    
+                    <div class="goal-option">
+                        <input type="checkbox" id="goal-health" name="goals" value="health">
+                        <label for="goal-health">
+                            <div class="option-icon"><i class="fas fa-heart"></i></div>
+                            <div class="option-text">General Health</div>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="step-navigation">
+                    <button class="next-btn" onclick="nextStep(1)">Continue</button>
+                </div>
+            </div>
+            
+            <!-- Step 2: Experience -->
+            <div class="assessment-step" id="step-2">
+                <h2>What's your fitness experience level?</h2>
+                <p class="step-description">Select the option that best describes you</p>
+                
+                <div class="experience-options">
+                    <div class="experience-option">
+                        <input type="radio" id="exp-beginner" name="experience" value="beginner">
+                        <label for="exp-beginner">
+                            <h3>Beginner</h3>
+                            <p>New to fitness or returning after a long break</p>
+                        </label>
+                    </div>
+                    
+                    <div class="experience-option">
+                        <input type="radio" id="exp-intermediate" name="experience" value="intermediate">
+                        <label for="exp-intermediate">
+                            <h3>Intermediate</h3>
+                            <p>Exercising regularly for 6+ months</p>
+                        </label>
+                    </div>
+                    
+                    <div class="experience-option">
+                        <input type="radio" id="exp-advanced" name="experience" value="advanced">
+                        <label for="exp-advanced">
+                            <h3>Advanced</h3>
+                            <p>Consistently working out for 2+ years</p>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="step-navigation">
+                    <button class="back-btn" onclick="prevStep(2)">Back</button>
+                    <button class="next-btn" onclick="nextStep(2)">Continue</button>
+                </div>
+            </div>
+            
+            <!-- Step 3: Time -->
+            <div class="assessment-step" id="step-3">
+                <h2>How much time can you dedicate to exercise?</h2>
+                <p class="step-description">Select your preferred workout frequency and duration</p>
+                
+                <div class="time-container">
+                    <div class="time-section">
+                        <h3>Days per Week</h3>
+                        <div class="time-options">
+                            <div class="time-option">
+                                <input type="radio" id="days-2-3" name="days" value="2-3">
+                                <label for="days-2-3">2-3 days</label>
+                            </div>
+                            
+                            <div class="time-option">
+                                <input type="radio" id="days-4-5" name="days" value="4-5">
+                                <label for="days-4-5">4-5 days</label>
+                            </div>
+                            
+                            <div class="time-option">
+                                <input type="radio" id="days-6-7" name="days" value="6-7">
+                                <label for="days-6-7">6-7 days</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="time-section">
+                        <h3>Minutes per Session</h3>
+                        <div class="time-options">
+                            <div class="time-option">
+                                <input type="radio" id="minutes-15-30" name="minutes" value="15-30">
+                                <label for="minutes-15-30">15-30 min</label>
+                            </div>
+                            
+                            <div class="time-option">
+                                <input type="radio" id="minutes-30-60" name="minutes" value="30-60">
+                                <label for="minutes-30-60">30-60 min</label>
+                            </div>
+                            
+                            <div class="time-option">
+                                <input type="radio" id="minutes-60-plus" name="minutes" value="60+">
+                                <label for="minutes-60-plus">60+ min</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step-navigation">
+                    <button class="back-btn" onclick="prevStep(3)">Back</button>
+                    <button class="next-btn" onclick="nextStep(3)">Continue</button>
+                </div>
+            </div>
+            
+            <!-- Step 4: Preferences -->
+            <div class="assessment-step" id="step-4">
+                <h2>What's your workout style preference?</h2>
+                <p class="step-description">Select all that interest you</p>
+                
+                <div class="preferences-container">
+                    <div class="preference-option">
+                        <input type="checkbox" id="pref-weights" name="preferences" value="weights">
+                        <label for="pref-weights">
+                            <div class="pref-icon"><i class="fas fa-dumbbell"></i></div>
+                            <div class="pref-text">Weight Training</div>
+                        </label>
+                    </div>
+                    
+                    <div class="preference-option">
+                        <input type="checkbox" id="pref-hiit" name="preferences" value="hiit">
+                        <label for="pref-hiit">
+                            <div class="pref-icon"><i class="fas fa-bolt"></i></div>
+                            <div class="pref-text">HIIT Workouts</div>
+                        </label>
+                    </div>
+                    
+                    <div class="preference-option">
+                        <input type="checkbox" id="pref-cardio" name="preferences" value="cardio">
+                        <label for="pref-cardio">
+                            <div class="pref-icon"><i class="fas fa-running"></i></div>
+                            <div class="pref-text">Cardio</div>
+                        </label>
+                    </div>
+                    
+                    <div class="preference-option">
+                        <input type="checkbox" id="pref-bodyweight" name="preferences" value="bodyweight">
+                        <label for="pref-bodyweight">
+                            <div class="pref-icon"><i class="fas fa-child"></i></div>
+                            <div class="pref-text">Bodyweight</div>
+                        </label>
+                    </div>
+                    
+                    <div class="preference-option">
+                        <input type="checkbox" id="pref-yoga" name="preferences" value="yoga">
+                        <label for="pref-yoga">
+                            <div class="pref-icon"><i class="fas fa-peace"></i></div>
+                            <div class="pref-text">Yoga/Pilates</div>
+                        </label>
+                    </div>
+                    
+                   
+                </div>
+                
+                <div class="step-navigation">
+                    <button class="back-btn" onclick="prevStep(4)">Back</button>
+                    <button class="next-btn" onclick="nextStep(4)">Continue</button>
+                </div>
+            </div>
+            
+            <!-- Step 5: Personal Details -->
+            <div class="assessment-step" id="step-5">
+                <h2>Tell us about yourself</h2>
+                <p class="step-description">This helps us create personalized recommendations</p>
+                
+                <div class="personal-details">
+                    <div class="form-group">
+                        <label for="age">Age <span class="required">*</span></label>
+                        <input type="number" id="age" name="age" placeholder="Your age" min="14" max="99" required>
+                        <span class="error-message" id="age-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Gender <span class="required">*</span></label>
+                        <div class="gender-options">
+                            <div class="gender-option">
+                                <input type="radio" id="gender-male" name="gender" value="male" required>
+                                <label for="gender-male">Male</label>
+                            </div>
+                            <div class="gender-option">
+                                <input type="radio" id="gender-female" name="gender" value="female" required>
+                                <label for="gender-female">Female</label>
+                            </div>
+                            <div class="gender-option">
+                                <input type="radio" id="gender-other" name="gender" value="other" required>
+                                <label for="gender-other">Other</label>
+                            </div>
+                        </div>
+                        <span class="error-message" id="gender-error"></span>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="height">Height (cm) <span class="required">*</span></label>
+                            <input type="number" id="height" name="height" placeholder="Height in cm" min="100" max="250" required>
+                            <span class="error-message" id="height-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="weight">Weight (kg) <span class="required">*</span></label>
+                            <input type="number" id="weight" name="weight" placeholder="Weight in kg" min="30" max="300" required>
+                            <span class="error-message" id="weight-error"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="restrictions">Any health restrictions or injuries? <span class="required">*</span></label>
+                        <textarea id="restrictions" name="restrictions" placeholder="Please share any health concerns or limitations. Write 'None' if not applicable." required></textarea>
+                        <span class="error-message" id="restrictions-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="Your email address" required>
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                </div>
+                
+                <div class="step-navigation">
+                    <button class="back-btn" onclick="prevStep(5)">Back</button>
+                    <button class="submit-btn" onclick="validateAndSubmit()">Get My Recommendations</button>
+                </div>
+            </div>
+            
+            <!-- Results screen (will be shown via JavaScript) -->
+            <div class="assessment-step" id="results">
+                <div class="results-loading">
+                    <div class="spinner"></div>
+                    <p>Analyzing your responses and creating personalized recommendations...</p>
+                </div>
+                
+                <div class="results-content" style="display: none;">
+                    <div class="results-header">
+                        <h2>Your Personalized Fitness Plan</h2>
+                        <p>Based on your goals, preferences, and fitness level</p>
+                    </div>
+                    
+                    <div class="recommended-programs">
+                        <h3>Recommended Programs</h3>
+                        <div class="program-cards" id="program-recommendations">
+                            <!-- Program cards will be inserted here via JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="fitness-insights">
+                        <h3>Your Fitness Insights</h3>
+                        <div class="insights-container" id="fitness-insights">
+                            <!-- Insights will be inserted here via JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="next-steps">
+                        <h3>Next Steps</h3>
+                        <p>Your personalized plan has been sent to your email. To get started:</p>
+                        <ol>
+                            <li>Review your recommended programs</li>
+                            <li>Choose the one that fits your preferences best</li>
+                            <li>Create an account to unlock your full fitness journey</li>
+                        </ol>
+                        <div class="cta-buttons">
+                            <a href="/signup" class="cta-btn primary">Create Account</a>
+                            <a href="/program" class="cta-btn secondary">Browse All Programs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>FlexFusion</h3>
+                <p>Your journey to a healthier, stronger you starts here.</p>
+                <div class="social-icons">
+                    <a href="/#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="/#"><i class="fab fa-instagram"></i></a>
+                    <a href="/#"><i class="fab fa-twitter"></i></a>
+                    <a href="/#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/homepage">Home</a></li>
+                    <li><a href="/programs">Fitness Programs</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> support@flexfusion.com</p>
+                <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Fitness St, Wellness City</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe for fitness tips, new programs, and special offers.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 FlexFusion. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/fitness_ass.js"></script>
+    <style>
+        .required {
+            color: #ff4444;
+            margin-left: 3px;
+        }
+        
+        .error-message {
+            color: #ff4444;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .form-group input.error,
+        .form-group textarea.error {
+            border-color: #ff4444;
+        }
+    </style>
+    
+    <script>
+        function validateAndSubmit() {
+            let isValid = true;
+            const fields = ['age', 'height', 'weight', 'restrictions', 'email'];
+            const errorMessages = {
+                age: 'Please enter a valid age between 14 and 99',
+                height: 'Please enter a valid height between 100 and 250 cm',
+                weight: 'Please enter a valid weight between 30 and 300 kg',
+                restrictions: 'Please provide information about any health restrictions or write "None"',
+                email: 'Please enter a valid email address'
+            };
+    
+            // Clear previous errors
+            document.querySelectorAll('.error-message').forEach(elem => elem.style.display = 'none');
+            document.querySelectorAll('input, textarea').forEach(elem => elem.classList.remove('error'));
+    
+            // Validate each field
+            fields.forEach(field => {
+                const element = document.getElementById(field);
+                if (!element.value.trim()) {
+                    document.getElementById(`${field}-error`).textContent = 'This field is required';
+                    document.getElementById(`${field}-error`).style.display = 'block';
+                    element.classList.add('error');
+                    isValid = false;
+                } else if (element.validity.typeMismatch || element.validity.rangeUnderflow || element.validity.rangeOverflow) {
+                    document.getElementById(field-error).textContent = errorMessages[field];
+                    document.getElementById(field + '-error').style.display = 'block';
+                    element.classList.add('error');
+                    isValid = false;
+                }
+            });
+    
+            // Validate gender
+            if (!document.querySelector('input[name="gender"]:checked')) {
+                document.getElementById('gender-error').textContent = 'Please select your gender';
+                document.getElementById('gender-error').style.display = 'block';
+                isValid = false;
+            }
+    
+            if (isValid) {
+                submitAssessment(); // Original submit function
+            }
+        }
+    </script>
+</body>
+</html>

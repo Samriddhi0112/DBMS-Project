@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keto Kickstart Diet Plan</title>
+  <link rel="stylesheet" href="/css/diet_plan.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="/logo.png" alt="FlexFusion Logo" class="logo">
+      <h1>FlexFusion</h1>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="/" class="<%= (page === 'home') ? 'active' : '' %>">Home</a></li>
+        <li><a href="/program" class="<%= (page === 'program') ? 'active' : '' %>">Plans</a></li>
+        <li><a href="/diet" class="<%= (page === 'diet') ? 'active' : '' %>">Diet</a></li>
+        <li><a href="/store" class="<%= (page === 'store') ? 'active' : '' %>">Store</a></li>
+      </ul>
+    </nav>
+    <div class="auth-buttons">
+      <% if (user) { %>
+        <a href="/logout" class="login-btn">Logout</a>
+        <span>Welcome, <%= user.name %>!</span>
+      <% } else { %>
+        <a href="/signup" class="signup-btn">Signup</a>
+        <a href="/login" class="login-btn">Login</a>
+      <% } %>
+    </div>
+    <% if (!user) { %>
+      <p class="error-message">User data is not available. Please log in to access personalized features.</p>
+    <% } %>
+  </header>
+
+  <main>
+    <!-- Plan Header -->
+    <section class="plan-header">
+      <h1>Keto Kickstart Diet Plan</h1>
+      <div class="plan-meta">
+        <span><i class="fas fa-clock"></i> Duration: 8 weeks</span>
+        <span><i class="fas fa-star"></i> Rating: <strong>4.5/5</strong></span>
+      </div>
+      <p>A low-carb, high-fat plan designed to switch your body into ketosis for effective fat burning. Perfect for those looking to jumpstart their keto journey and achieve their fitness goals.</p>
+    </section>
+
+    <!-- Locked Content Section -->
+    <section id="locked-content" class="locked-content-section">
+      <h2>Preview Plan</h2>
+      <p class="locked-message">Some content is locked. Unlock the full plan by enrolling.</p>
+      
+      <!-- Locked Content -->
+      <div class="meal">
+        <h3>Breakfast</h3>
+        <ul>
+          <li>✅ Avocado and egg salad with a sprinkle of sea salt</li>
+          <li class="locked-content">
+            🔒 <span>Keto smoothie with almond milk, spinach, and chia seeds (Locked)</span>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="meal locked">
+        <h3>Lunch <i class="fas fa-lock"></i></h3>
+        <p class="locked-content">🔒 Grilled chicken with zucchini noodles and pesto (Locked)</p>
+      </div>
+
+      <div class="meal locked">
+        <h3>Dinner <i class="fas fa-lock"></i></h3>
+        <p class="locked-content">🔒 Cauliflower rice with buttered shrimp and garlic (Locked)</p>
+      </div>
+    </section>
+
+    <!-- Motivational Section -->
+    <section class="motivational-section">
+      <h2><i class="fas fa-heart"></i> Why Choose Keto Kickstart?</h2>
+      <ul>
+        <li>Low-carb meals to help you enter ketosis quickly</li>
+        <li>High-fat recipes for sustained energy</li>
+        <li>Delicious and easy-to-follow ketogenic recipes</li>
+        <li>Expert tips for maintaining a keto lifestyle</li>
+      </ul>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="call-to-action">
+      <h2>Unlock the Full Plan and Enter Ketosis</h2>
+      <p>Get access to a complete weekly meal plan, ketogenic recipes, and lifestyle tips for effective fat burning.</p>
+      <p class="price">Price: <strong>Rs.1300</strong></p>
+      <% if (user) { %>
+        <a href="/payment" class="cta-button">Enroll Now</a>
+      <% } else { %>
+        <a href="/login?redirectTo=/payment" class="cta-button">Enroll Now</a>
+      <% } %>
+    </section>
+
+    <!-- Full Content Section -->
+    <% if (user) { %>
+    <section id="full-content" class="full-content-section hidden">
+      <h2>Full Keto Plan</h2>
+      <p>Welcome to the full Keto Kickstart Diet Plan. Below is your detailed ketogenic meal plan for the week:</p>
+      
+      <!-- Full Content: Weekly Meal Plan -->
+      <div class="weekly-plan">
+        <h3>Day 1</h3>
+        <ul>
+          <li><strong>Breakfast:</strong> Avocado and egg salad with olive oil drizzle</li>
+          <li><strong>Lunch:</strong> Grilled chicken with zucchini noodles and pesto</li>
+          <li><strong>Dinner:</strong> Cauliflower rice with buttered shrimp and garlic</li>
+        </ul>
+        
+        <h3>Day 2</h3>
+        <ul>
+          <li><strong>Breakfast:</strong> Keto smoothie with almond milk, spinach, and chia seeds</li>
+          <li><strong>Lunch:</strong> Salmon and asparagus with lemon butter sauce</li>
+          <li><strong>Dinner:</strong> Keto pizza with almond flour crust and mozzarella</li>
+        </ul>
+        
+        <h3>Day 3</h3>
+        <ul>
+          <li><strong>Breakfast:</strong> Scrambled eggs with cheese and avocado slices</li>
+          <li><strong>Lunch:</strong> Beef stir-fry with broccoli and coconut aminos</li>
+          <li><strong>Dinner:</strong> Zucchini lasagna with ricotta and marinara sauce</li>
+        </ul>
+
+        <h3>Day 4</h3>
+        <ul>
+          <li><strong>Breakfast:</strong> Keto pancakes with cream cheese and sugar-free syrup</li>
+          <li><strong>Lunch:</strong> Grilled chicken Caesar salad (no croutons)</li>
+          <li><strong>Dinner:</strong> Pork chops with mashed cauliflower and green beans</li>
+        </ul>
+
+        <h3>Day 5</h3>
+        <ul>
+          <li><strong>Breakfast:</strong> Boiled eggs with avocado and smoked salmon</li>
+          <li><strong>Lunch:</strong> Spinach and feta stuffed chicken breast</li>
+          <li><strong>Dinner:</strong> Keto chili with sour cream and cheddar cheese</li>
+        </ul>
+
+        <h3>Day 6</h3>
+        <ul>
+          <li><strong>Breakfast:</strong> Bulletproof coffee with grass-fed butter and MCT oil</li>
+          <li><strong>Lunch:</strong> Turkey and avocado lettuce wraps</li>
+          <li><strong>Dinner:</strong> Baked salmon with Brussels sprouts and bacon</li>
+        </ul>
+
+        <h3>Day 7</h3>
+        <ul>
+          <li><strong>Breakfast:</strong> Omelette with mushrooms, spinach, and feta</li>
+          <li><strong>Lunch:</strong> Keto Cobb salad with ranch dressing</li>
+          <li><strong>Dinner:</strong> Grilled steak with garlic butter and steamed broccoli</li>
+        </ul>
+      </div>
+    </section>
+    <% } %>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="/logo.png" alt="FlexFusion Logo" class="footer-logo-img">
+        <h3>FlexFusion</h3>
+        <p>Personalized fitness & nutrition for every body.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/team">Our Team</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="/programs">All Plans</a></li>
+            <li><a href="/program_detail">Strength Training</a></li>
+            <li><a href="/program_detail">HIIT Workouts</a></li>
+            <li><a href="/program_detail">Flexibility</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms of Service</a></li>
+            <li><a href="/help">Help Center</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-social">
+        <h4>Connect With Us</h4>
+        <div class="social-icons">
+          <a href="/#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="/#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="/#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="/#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="newsletter">
+          <h4>Get Weekly Tips & Offers</h4>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" aria-label="Email Address">
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 FlexFusion. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="/privacyl">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/sitemap">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/diet_plan.js"></script>
+</body>
+</html>

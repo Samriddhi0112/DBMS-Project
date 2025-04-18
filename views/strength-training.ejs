@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexFusion - My Workouts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/program-videos.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+            <img src="/api/placeholder/40/40" alt="FlexFusion Logo" class="logo">
+            <h1>FlexFusion</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/" class="<%= (page === 'home') ? 'active' : '' %>">Home</a></li>
+                <li><a href="/program" class="<%= (page === 'program') ? 'active' : '' %>">Plans</a></li>
+                <li><a href="/diet" class="<%= (page === 'diet') ? 'active' : '' %>">Diet</a></li>
+                <li><a href="/store" class="<%= (page === 'store') ? 'active' : '' %>">Store</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h1 class="program-title">Strength Foundations</h1>
+        <p class="program-details">Build a solid foundation with our beginner-friendly strength program</p>
+
+         <!-- Program Navigation -->
+         <div class="program-navigation">
+            <h3 class="program-nav-title">Jump to Week:</h3>
+            <div class="program-week-nav">
+                <button class="week-nav-btn active" data-week="1">Week 1</button>
+                <button class="week-nav-btn" data-week="2">Week 2</button>
+            </div>
+        </div>
+
+
+        <!-- Week One Section -->
+        <section class="week-section" id="week1">
+            <div class="week-header">
+                <h2 class="week-title">Week One</h2>
+            </div>
+            <div class="workout-grid">
+                <!-- Day 1 -->
+                <a href="https://www.youtube.com/watch?v=2MoGxae-zyo" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/3775164/pexels-photo-3775164.jpeg" alt="Cardio" alt="Full Body Cardio">
+                        
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="completed-badge">
+                            <i class="fas fa-check-circle"></i> Completed
+                        </div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 01</div>
+                        <h3 class="workout-title">Full Body Cardio</h3>
+                        <p class="workout-description">Get your heart pumping with this full body cardio session.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Cardio</span>
+                            <span class="workout-tag">Full Body</span>
+                            <span class="workout-tag">Beginner</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Day 2 First Workout -->
+                <a href="https://www.youtube.com/watch?v=SyAo6bXB8XU&list=PLGj6tJC_x-771Cx5q_AFuHDJULqqn63XD" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/3775566/pexels-photo-3775566.jpeg" alt="K-Pop Dance Workout">
+                    
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="completed-badge">
+                            <i class="fas fa-check-circle"></i> Completed
+                        </div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 02</div>
+                        <h3 class="workout-title">K-Pop Dance Workout</h3>
+                        <p class="workout-description">Fun cardio workout with K-Pop dance moves.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Dance</span>
+                            <span class="workout-tag">Cardio</span>
+                            <span class="workout-tag">Fun</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Day 2 Second Workout -->
+                <a href="https://www.youtube.com/watch?v=UBnfm4s7CRA" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/4056535/pexels-photo-4056535.jpeg" alt="Full Body Pilates">
+                        <div class="workout-duration">25 mins</div>
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="completed-badge">
+                            <i class="fas fa-check-circle"></i> Completed
+                        </div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 02</div>
+                        <h3 class="workout-title">Full Body Pilates</h3>
+                        <p class="workout-description">Strengthen your core with this full body pilates session.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Pilates</span>
+                            <span class="workout-tag">Core</span>
+                            <span class="workout-tag">Strength</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Day 3 -->
+                <a href="https://www.youtube.com/watch?v=ml6cT4AZdqI" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/999309/pexels-photo-999309.jpeg" alt="Full Body HIIT">
+                        
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="completed-badge">
+                            <i class="fas fa-check-circle"></i> Completed
+                        </div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 03</div>
+                        <h3 class="workout-title">Full Body HIIT</h3>
+                        <p class="workout-description">High-intensity interval training for maximum calorie burn.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">HIIT</span>
+                            <span class="workout-tag">Intense</span>
+                            <span class="workout-tag">Full Body</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Day 4 -->
+                <a href="https://www.youtube.com/watch?v=WmSIMpIDa_A" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/3822719/pexels-photo-3822719.jpeg" alt="Yoga for Strength">
+                      
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 04</div>
+                        <h3 class="workout-title">Yoga for Strength</h3>
+                        <p class="workout-description">Build strength and flexibility with this yoga session.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Yoga</span>
+                            <span class="workout-tag">Flexibility</span>
+                            <span class="workout-tag">Strength</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Day 5 -->
+                <a href="https://www.youtube.com/watch?v=j64BBgBGNIU" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg" alt="Upper Body Strength">
+                       
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 05</div>
+                        <h3 class="workout-title">Upper Body Strength</h3>
+                        <p class="workout-description">Focus on arm, chest, and back muscles with this targeted workout.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Upper Body</span>
+                            <span class="workout-tag">Strength</span>
+                            <span class="workout-tag">Toning</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Day 6 -->
+                <a href="https://www.youtube.com/watch?v=EUruBzhv7Kk" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/4164759/pexels-photo-4164759.jpeg" alt="Lower Body Focus">
+                        <div class="workout-duration">25 mins</div>
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 06</div>
+                        <h3 class="workout-title">Lower Body Focus</h3>
+                        <p class="workout-description">Target your legs and glutes with this strengthening workout.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Lower Body</span>
+                            <span class="workout-tag">Glutes</span>
+                            <span class="workout-tag">Strength</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Day 7 - Rest Day -->
+                <div class="workout-card rest-day-card">
+                    <div class="workout-thumbnail rest-day">
+                        <div class="rest-day-icon">
+                            <i class="fas fa-bed"></i>
+                            <i class="fas fa-moon"></i>
+                        </div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 07</div>
+                        <h3 class="workout-title">Rest Day</h3>
+                        <p class="workout-description">Take a break and let your body recover. Rest is just as important as exercise.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Recovery</span>
+                            <span class="workout-tag">Rest</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Week Two Section -->
+        <section class="week-section" id="week2">
+            <div class="week-header">
+                <h2 class="week-title">Week Two</h2>
+            </div>
+            <div class="workout-grid">
+                <!-- Day 8 -->
+                <a href="https://www.youtube.com/watch?v=IT94xC35u6k" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg" alt="Total Body Workout">
+                        
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 08</div>
+                        <h3 class="workout-title">Total Body Workout</h3>
+                        <p class="workout-description">Comprehensive full body workout targeting all major muscle groups.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Full Body</span>
+                            <span class="workout-tag">Strength</span>
+                            <span class="workout-tag">Endurance</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Day 9 -->
+                <a href="https://www.youtube.com/watch?v=1f8yoFFdkcY" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg" alt="Core & Abs">
+                        
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 09</div>
+                        <h3 class="workout-title">Core & Abs Focus</h3>
+                        <p class="workout-description">Targeted core strengthening exercises for defined abs.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Core</span>
+                            <span class="workout-tag">Abs</span>
+                            <span class="workout-tag">Strength</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Day 10 -->
+                <a href="https://www.youtube.com/watch?v=1ZnM58MeJkU" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/4162487/pexels-photo-4162487.jpeg" alt="Tabata Challenge">
+                       
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 10</div>
+                        <h3 class="workout-title">Tabata Challenge</h3>
+                        <p class="workout-description">High-intensity Tabata intervals for maximum fat burn.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">HIIT</span>
+                            <span class="workout-tag">Tabata</span>
+                            <span class="workout-tag">Challenge</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Day 11 -->
+                <a href="https://www.youtube.com/watch?v=L_xrDAtykMI" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg" alt="Stretch & Mobility">
+                        
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 11</div>
+                        <h3 class="workout-title">Stretch & Mobility</h3>
+                        <p class="workout-description">Improve flexibility and joint mobility with guided stretches.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Flexibility</span>
+                            <span class="workout-tag">Mobility</span>
+                            <span class="workout-tag">Recovery</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Day 12 -->
+                <a href="https://www.youtube.com/watch?v=j64BBgBGNIU" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/3837757/pexels-photo-3837757.jpeg" alt="Upper Body Challenge">
+                        
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>  
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 12</div>
+                        <h3 class="workout-title">Upper Body Challenge</h3>
+                        <p class="workout-description">Intense upper body workout to build strength and definition.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Upper Body</span>
+                            <span class="workout-tag">Strength</span>
+                            <span class="workout-tag">Challenge</span>
+                        </div>
+                    </div>  
+                </a>
+                <!-- Day 13 -->
+                <a href="https://www.youtube.com/watch?v=EUruBzhv7Kk" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/4498603/pexels-photo-4498603.jpeg" alt="Lower Body Challenge">
+                        <div class="workout-duration">30 mins</div>
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>  
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 13</div>
+                        <h3 class="workout-title">Lower Body Challenge</h3>
+                        <p class="workout-description">Intense lower body workout to build strength and definition.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Lower Body</span>
+                            <span class="workout-tag">Strength</span>
+                            <span class="workout-tag">Challenge</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Day 14 - Rest Day -->
+                <div class="workout-card rest-day-card">
+                    <div class="workout-thumbnail rest-day">
+                        <div class="rest-day-icon">
+                            <i class="fas fa-bed"></i>
+                            <i class="fas fa-moon"></i>
+                        </div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 14</div>
+                        <h3 class="workout-title">Rest Day</h3>
+                        <p class="workout-description">Time to recover and recharge. Use this day for light stretching or meditation.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Recovery</span>
+                            <span class="workout-tag">Rest</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="/logo.png" alt="FlexFusion Logo" class="footer-logo-img">
+            <h3>FlexFusion</h3>
+            <p>Personalized fitness & nutrition for every body.</p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/team">Our Team</a></li>
+                <li><a href="/careers">Careers</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+              </ul>
+            </div>
+    
+            <div class="footer-column">
+              <h4>Support</h4>
+              <ul>
+                <li><a href="/faq">FAQ</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+                <li><a href="/terms">Terms of Service</a></li>
+                <li><a href="/help">Help Center</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-social">
+            <h4>Connect With Us</h4>
+            <div class="social-icons">
+              <a href="/#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="/#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="/#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="/#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="newsletter">
+              <h4>Get Weekly Tips & Offers</h4>
+              <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" aria-label="Email Address">
+                <button type="submit">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 FlexFusion. All rights reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
+            <a href="/sitemap">Sitemap</a>
+          </div>
+        </div>
+      </footer>
+        <script src="/program-videos.js"></script>
+   
+</body>
+</html>
+

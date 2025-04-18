@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Power Plate Diet Plan - Vegetarian</title>
+  <link rel="stylesheet" href="/css/diet_plan.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="/logo.png" alt="FlexFusion Logo" class="logo">
+      <h1>FlexFusion</h1>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="/" class="<%= (page === 'home') ? 'active' : '' %>">Home</a></li>
+        <li><a href="/program" class="<%= (page === 'program') ? 'active' : '' %>">Plans</a></li>
+        <li><a href="/diet" class="<%= (page === 'diet') ? 'active' : '' %>">Diet</a></li>
+        <li><a href="/store" class="<%= (page === 'store') ? 'active' : '' %>">Store</a></li>
+      </ul>
+    </nav>
+    <div class="auth-buttons">
+      <% if (user) { %>
+        <a href="/logout" class="login-btn">Logout</a>
+        <span>Welcome, <%= user.name %>!</span>
+      <% } else { %>
+        <a href="/signup" class="signup-btn">Signup</a>
+        <a href="/login" class="login-btn">Login</a>
+      <% } %>
+    </div>
+    <% if (!user) { %>
+      <p class="error-message">User data is not available. Please log in to access personalized features.</p>
+    <% } %>
+  </header>
+
+  <main>
+    <!-- Plan Header -->
+    <section class="plan-header">
+      <h1>Power Plate Diet Plan</h1>
+      <div class="plan-meta">
+        <span><i class="fas fa-clock"></i> Duration: 10 weeks</span>
+        <span><i class="fas fa-star"></i> Rating: <strong>4.9/5</strong></span>
+      </div>
+      <p>A nutrient-rich vegetarian plan providing high protein and balanced calories for muscle building. Ideal for those looking to increase strength and build muscle sustainably!</p>
+    </section>
+
+    <!-- Locked Content Section -->
+    <section id="locked-content" class="locked-content-section">
+      <h2>Preview Plan</h2>
+      <p class="locked-message">Some content is locked. Unlock the full plan by enrolling.</p>
+      
+      <!-- Locked Content -->
+      <div class="meal">
+        <h3>Breakfast</h3>
+        <ul>
+          <li>✅ Scrambled tofu with spinach and whole-grain toast</li>
+          <li class="locked-content">
+            🔒 <span>Whey protein smoothie with almond butter (Locked)</span>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="meal locked">
+        <h3>Lunch <i class="fas fa-lock"></i></h3>
+        <p class="locked-content">🔒 Lentil and chickpea salad with tahini dressing (Locked)</p>
+      </div>
+
+      <div class="meal locked">
+        <h3>Dinner <i class="fas fa-lock"></i></h3>
+        <p class="locked-content">🔒 Grilled paneer with roasted vegetables and quinoa (Locked)</p>
+      </div>
+    </section>
+
+    <!-- Motivational Section -->
+    <section class="motivational-section">
+      <h2><i class="fas fa-heart"></i> Why Choose Power Plate?</h2>
+      <ul>
+        <li>High-protein meals tailored for muscle gain</li>
+        <li>Balanced nutrition to fuel strength and recovery</li>
+        <li>Delicious recipes crafted for fitness enthusiasts</li>
+        <li>Expert tips and guidance for achieving your goals</li>
+      </ul>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="call-to-action">
+      <h2>Unlock the Full Plan and Build Your Strength</h2>
+      <p>Get access to a complete weekly meal plan, high-protein vegetarian recipes, and exclusive muscle-building tips!</p>
+      <p class="price">Price: <strong>Rs.1500</strong></p>
+      <% if (user) { %>
+        <a href="/payment" class="cta-button">Enroll Now</a>
+      <% } else { %>
+        <a href="/login?redirectTo=/payment" class="cta-button">Enroll Now</a>
+      <% } %>
+    </section>
+
+    <!-- Full Content Section -->
+    <section id="full-content" class="full-content-section hidden">
+      <h2>Full Vegetarian Plan</h2>
+      <p>Welcome to the full Power Plate Diet Plan. Below is your detailed vegetarian meal plan for the week:</p>
+      
+      <!-- Full Content: Weekly Meal Plan -->
+      <div class="weekly-plan">
+        <h3>Day 1</h3>
+        <ul>
+          <li><strong>Breakfast:</strong> Scrambled tofu with spinach and whole-grain toast</li>
+          <li><strong>Lunch:</strong> Lentil and chickpea salad with tahini dressing</li>
+          <li><strong>Dinner:</strong> Grilled paneer with quinoa and roasted vegetables</li>
+        </ul>
+        
+        <h3>Day 2</h3>
+        <ul>
+          <li><strong>Breakfast:</strong> Greek yogurt with chia seeds, granola, and fresh fruits</li>
+          <li><strong>Lunch:</strong> Vegetable stir-fry with tofu and brown rice</li>
+          <li><strong>Dinner:</strong> Spinach and ricotta stuffed whole-grain tortillas</li>
+        </ul>
+        
+        <h3>Day 3</h3>
+        <ul>
+          <li><strong>Breakfast:</strong> Oatmeal with almonds, raisins, and a drizzle of honey</li>
+          <li><strong>Lunch:</strong> Quinoa bowl with roasted sweet potatoes and chickpeas</li>
+          <li><strong>Dinner:</strong> Baked eggplant with tomato sauce and mozzarella</li>
+        </ul>
+
+        <h3>Day 4</h3>
+        <ul>
+          <li><strong>Breakfast:</strong> Avocado toast with a sprinkle of chili flakes</li>
+          <li><strong>Lunch:</strong> Spinach and feta cheese salad with balsamic dressing</li>
+          <li><strong>Dinner:</strong> Mushroom risotto with a side of steamed asparagus</li>
+        </ul>
+
+        <h3>Day 5</h3>
+        <ul>
+          <li><strong>Breakfast:</strong> Smoothie bowl with banana, spinach, almond milk, and granola</li>
+          <li><strong>Lunch:</strong> Whole-grain pasta with pesto and roasted cherry tomatoes</li>
+          <li><strong>Dinner:</strong> Paneer tikka with a side of mint chutney</li>
+        </ul>
+
+        <h3>Day 6</h3>
+        <ul>
+          <li><strong>Breakfast:</strong> Protein pancakes with maple syrup and mixed berries</li>
+          <li><strong>Lunch:</strong> Grilled vegetable sandwich with hummus</li>
+          <li><strong>Dinner:</strong> Stuffed bell peppers with quinoa and black beans</li>
+        </ul>
+
+        <h3>Day 7</h3>
+        <ul>
+          <li><strong>Breakfast:</strong> Overnight oats with almond butter and chia seeds</li>
+          <li><strong>Lunch:</strong> Buddha bowl with tofu, avocado, and tahini dressing</li>
+          <li><strong>Dinner:</strong> Veggie burger with sweet potato fries</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="/logo.png" alt="FlexFusion Logo" class="footer-logo-img">
+        <h3>FlexFusion</h3>
+        <p>Personalized fitness & nutrition for every body.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/team">Our Team</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="/programs">All Plans</a></li>
+            <li><a href="/program_detail">Strength Training</a></li>
+            <li><a href="/program_detail">HIIT Workouts</a></li>
+            <li><a href="/program_detail">Flexibility</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms of Service</a></li>
+            <li><a href="/help">Help Center</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-social">
+        <h4>Connect With Us</h4>
+        <div class="social-icons">
+          <a href="/#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="/#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="/#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="/#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="newsletter">
+          <h4>Get Weekly Tips & Offers</h4>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" aria-label="Email Address">
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 FlexFusion. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/sitemap">Sitemap</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="diet_plan.js"></script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexFusion - Cross Training Elite</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/program-videos.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="/logo.png" alt="FlexFusion Logo" class="logo">
+            <h1>FlexFusion</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/" class="<%= (page === 'home') ? 'active' : '' %>">Home</a></li>
+                <li><a href="/program" class="<%= (page === 'program') ? 'active' : '' %>">Plans</a></li>
+                <li><a href="/diet" class="<%= (page === 'diet') ? 'active' : '' %>">Diet</a></li>
+                <li><a href="/store" class="<%= (page === 'store') ? 'active' : '' %>">Store</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="program-title">Cross Training Elite</h1>
+        <p class="program-details">Master advanced cross-training techniques for peak athletic performance</p>
+
+        <!-- Program Navigation -->
+        <div class="program-navigation">
+            <h3 class="program-nav-title">Jump to Week:</h3>
+            <div class="program-week-nav">
+                <button class="week-nav-btn active" data-week="1">Week 1</button>
+                <button class="week-nav-btn" data-week="2">Week 2</button>
+            </div>
+        </div>
+
+        <!-- Week One Section -->
+        <section class="week-section" id="week1">
+            <div class="week-header">
+                <h2 class="week-title">Week One - Foundation Phase</h2>
+            </div>
+            <div class="workout-grid">
+                <!-- Day 1 -->
+                <a href="https://www.youtube.com/watch?v=4PHx8OIk4Sc" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/7674483/pexels-photo-7674483.jpeg" alt="Olympic Lifting">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 01</div>
+                        <h3 class="workout-title">Olympic Lifting Complex</h3>
+                        <p class="workout-description">Advanced Olympic lifting techniques and power development.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Olympic</span>
+                            <span class="workout-tag">Power</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Day 2 -->
+                <a href="https://www.youtube.com/watch?v=BkS1-El_WlE" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/4162451/pexels-photo-4162451.jpeg" alt="Gymnastic Skills">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 02</div>
+                        <h3 class="workout-title">Gymnastic Skills</h3>
+                        <p class="workout-description">Advanced bodyweight movements and skill development.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Gymnastics</span>
+                            <span class="workout-tag">Skills</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Day 3 -->
+                <a href="https://www.youtube.com/watch?v=qLBImHhCXSw" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/4098364/pexels-photo-4098364.jpeg" alt="Mobility Training">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 03</div>
+                        <h3 class="workout-title">Advanced Mobility Flow</h3>
+                        <p class="workout-description">Dynamic mobility and movement patterns for athletic performance.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Mobility</span>
+                            <span class="workout-tag">Flow</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Day 4 -->
+                <a href="https://www.youtube.com/watch?v=pAJB8gJBvko" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/4761352/pexels-photo-4761352.jpeg" alt="Endurance">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 04</div>
+                        <h3 class="workout-title">MetCon Challenge</h3>
+                        <p class="workout-description">High-intensity metabolic conditioning.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">MetCon</span>
+                            <span class="workout-tag">Endurance</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Day 5 -->
+                <a href="https://www.youtube.com/watch?v=IEL0O_LDV8A" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg" alt="Strength">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 05</div>
+                        <h3 class="workout-title">Power & Strength</h3>
+                        <p class="workout-description">Heavy compound lifts and power movements.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Strength</span>
+                            <span class="workout-tag">Power</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Days 6-7: Rest -->
+                <div class="workout-card rest-day-card">
+                    <div class="workout-thumbnail rest-day">
+                        <div class="rest-day-icon">
+                            <i class="fas fa-bed"></i>
+                            <i class="fas fa-moon"></i>
+                        </div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 06-07</div>
+                        <h3 class="workout-title">Weekend Recovery</h3>
+                        <p class="workout-description">Rest and recovery for next week.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Recovery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Week Two Section -->
+        <section class="week-section" id="week2">
+            <div class="week-header">
+                <h2 class="week-title">Week Two - Performance Phase</h2>
+            </div>
+            <div class="workout-grid">
+                
+                <!-- Day 8 -->
+                <a href="https://www.youtube.com/watch?v=67rgxYNKbZY" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg" alt="Complex Training">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 08</div>
+                        <h3 class="workout-title">Complex Training</h3>
+                        <p class="workout-description">Advanced compound movements and plyometrics.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Complex</span>
+                            <span class="workout-tag">Power</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Day 9 -->
+                <a href="https://www.youtube.com/watch?v=R0mMyV5OtcM" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/6550851/pexels-photo-6550851.jpeg" alt="Ring Training">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 09</div>
+                        <h3 class="workout-title">Advanced Ring Work</h3>
+                        <p class="workout-description">Gymnastic ring strength and stability training.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Rings</span>
+                            <span class="workout-tag">Gymnastics</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Day 10 -->
+                <a href="https://www.youtube.com/watch?v=5kwJvxUJIVQ" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/2294362/pexels-photo-2294362.jpeg" alt="Explosive Training">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 10</div>
+                        <h3 class="workout-title">Power & Explosiveness</h3>
+                        <p class="workout-description">Advanced plyometrics and explosive movement training.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Plyometrics</span>
+                            <span class="workout-tag">Power</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Day 11 -->
+                <a href="https://www.youtube.com/watch?v=YdB1HMCldJY" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/6550852/pexels-photo-6550852.jpeg" alt="Strongman">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 11</div>
+                        <h3 class="workout-title">Strongman Elements</h3>
+                        <p class="workout-description">Advanced strength and power movements.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Strongman</span>
+                            <span class="workout-tag">Power</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Day 12 -->
+                <a href="https://www.youtube.com/watch?v=9PoqGxqGZnc" class="workout-card" target="_blank" rel="noopener noreferrer">
+                    <div class="workout-thumbnail">
+                        <img src="https://images.pexels.com/photos/6739947/pexels-photo-6739947.jpeg" alt="Endurance">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 12</div>
+                        <h3 class="workout-title">Elite MetCon</h3>
+                        <p class="workout-description">Advanced metabolic conditioning workout.</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">MetCon</span>
+                            <span class="workout-tag">Advanced</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Days 13-14: Rest -->
+                <div class="workout-card rest-day-card">
+                    <div class="workout-thumbnail rest-day">
+                        <div class="rest-day-icon">
+                            <i class="fas fa-bed"></i>
+                            <i class="fas fa-moon"></i>
+                        </div>
+                    </div>
+                    <div class="workout-info">
+                        <div class="day-label">Day 13-14</div>
+                        <h3 class="workout-title">Program Complete!</h3>
+                        <p class="workout-description">Congratulations on completing the program!</p>
+                        <div class="workout-tags">
+                            <span class="workout-tag">Complete</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="/logo.png" alt="FlexFusion Logo" class="footer-logo-img">
+                <h2>FlexFusion</h2>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/homepage">Home</a></li>
+                        <li><a href="/programs">Programs</a></li>
+                        <li><a href="/diet">Diet Plans</a></li>
+                        <li><a href="/store">Store</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="/#">Contact Us</a></li>
+                        <li><a href="/#">FAQ</a></li>
+                        <li><a href="/#">Privacy Policy</a></li>
+                        <li><a href="/#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="/#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="/#"><i class="fab fa-twitter"></i></a>
+                    <a href="/#"><i class="fab fa-instagram"></i></a>
+                    <a href="/#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h4>Subscribe to Our Newsletter</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 FlexFusion. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/program-videos.js"></script>
+</body>
+</html>

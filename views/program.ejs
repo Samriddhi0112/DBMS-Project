@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexFusion - Programs</title>
+    <link rel="stylesheet" href="/css/programs.css">
+    <link rel="stylesheet" href="/css/program-detail.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="/logo.png" alt="FlexFusion Logo" class="logo">
+            <h1>FlexFusion</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/" class="<%= (page === 'home') ? 'active' : '' %>">Home</a></li>
+                <li><a href="/program" class="<%= (page === 'program') ? 'active' : '' %>">Plans</a></li>
+                <li><a href="/diet" class="<%= (page === 'diet') ? 'active' : '' %>">Diet</a></li>
+                <li><a href="/store" class="<%= (page === 'store') ? 'active' : '' %>">Store</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <% if (user) { %>
+                <a href="/logout" class="login-btn">Logout</a>
+                <span>Welcome, <%= user.name %>!</span>
+              <% } else { %>
+                <a href="/signup" class="signup-btn">Signup</a>
+                <a href="/login" class="login-btn">Login</a>
+              <% } %>
+            </div>
+            <% if (!user) { %>
+              <p class="error-message">User data is not available. Please log in to access personalized features.</p>
+            <% } %>
+    </header>
+
+    <div class="hero-section">
+        <h1>Fitness Programs</h1>
+        <p>Find the perfect program to achieve your fitness goals</p>
+    </div>
+
+    <div class="program-filter">
+        <button class="filter-btn active" data-filter="all">All Programs</button>
+    </div>
+
+    <div class="programs-container">
+        <% programs.forEach(program => { %>
+            <div class="program-card" data-category="<%= program.level.toLowerCase() %>">
+                <div class="program-image">
+                    <img src="<%= program.image_url %>" alt="<%= program.name %>">
+                    <div class="difficulty-badge"><%= program.level %></div>
+                </div>
+                <div class="program-details">
+                    <h3><%= program.name %></h3>
+                    <div class="program-meta">
+                        <span><i class="fas fa-calendar-alt"></i> <%= program.duration %></span>
+                        <span><i class="fas fa-dumbbell"></i> <%= program.sessions_per_week %> days/week</span>
+                        <span><i class="fas fa-tag"></i> Rs. <%= program.price %></span>
+                    </div>
+                    <p><%= program.description %></p>
+                    <a href="/program-detail?id=<%= program.id %>" class="program-btn">View Program</a>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+
+    <div class="cta-section">
+        <div class="cta-content">
+            <h2>Not sure which program is right for you?</h2>
+            <p>Take our fitness assessment and get personalized program recommendations.</p>
+            <a href="/fitness_ass" class="cta-button">Take Fitness Assessment</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="/logo.png" alt="FlexFusion Logo" class="footer-logo-img">
+                <h3>FlexFusion</h3>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Company</h4>    
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/team">Our Team</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/help">Help Center</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="/#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="/#"><i class="fab fa-instagram"></i></a>
+                    <a href="/#"><i class="fab fa-twitter"></i></a>
+                    <a href="/#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h4>Subscribe to our Newsletter</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 FlexFusion. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/programs.js"></script>
+    
+
+</body>
+</html>
